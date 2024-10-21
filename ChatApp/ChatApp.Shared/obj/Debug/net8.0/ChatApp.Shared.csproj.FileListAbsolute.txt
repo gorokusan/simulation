@@ -1,0 +1,12 @@
+C:\Users\h-tan\source\repos\ChatApp\ChatApp.Shared\bin\Debug\net8.0\ChatApp.Shared.deps.json
+C:\Users\h-tan\source\repos\ChatApp\ChatApp.Shared\bin\Debug\net8.0\ChatApp.Shared.dll
+C:\Users\h-tan\source\repos\ChatApp\ChatApp.Shared\bin\Debug\net8.0\ChatApp.Shared.pdb
+C:\Users\h-tan\source\repos\ChatApp\ChatApp.Shared\obj\Debug\net8.0\ChatApp.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\h-tan\source\repos\ChatApp\ChatApp.Shared\obj\Debug\net8.0\ChatApp.Shared.AssemblyInfoInputs.cache
+C:\Users\h-tan\source\repos\ChatApp\ChatApp.Shared\obj\Debug\net8.0\ChatApp.Shared.AssemblyInfo.cs
+C:\Users\h-tan\source\repos\ChatApp\ChatApp.Shared\obj\Debug\net8.0\ChatApp.Shared.csproj.CoreCompileInputs.cache
+C:\Users\h-tan\source\repos\ChatApp\ChatApp.Shared\obj\Debug\net8.0\ChatApp.Shared.sourcelink.json
+C:\Users\h-tan\source\repos\ChatApp\ChatApp.Shared\obj\Debug\net8.0\ChatApp.Shared.dll
+C:\Users\h-tan\source\repos\ChatApp\ChatApp.Shared\obj\Debug\net8.0\refint\ChatApp.Shared.dll
+C:\Users\h-tan\source\repos\ChatApp\ChatApp.Shared\obj\Debug\net8.0\ChatApp.Shared.pdb
+C:\Users\h-tan\source\repos\ChatApp\ChatApp.Shared\obj\Debug\net8.0\ref\ChatApp.Shared.dll

@@ -1,0 +1,1 @@
+C:\Users\h-tan\source\repos\ChatApp\ChatApp.Client\ChatApp.Client.csproj;x64

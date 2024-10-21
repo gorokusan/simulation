@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ChatApp.Client.Views.ChatPage"
+             xmlns:viewModels="clr-namespace:ChatApp.Client.ViewModels"
+             Title="ChatPage">
+
+    <StackLayout Padding="10">
+        <Label Text="チャットへようこそ!"
+               FontSize="Large"
+               HorizontalOptions="Center" />
+
+        <ListView x:Name="MessagesListView"
+                  ItemsSource="{Binding Messages}"
+                  VerticalOptions="FillAndExpand"
+                  SeparatorVisibility="Default">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Vertical" Padding="5">
+                            <Label Text="{Binding Sender}" 
+                                   FontAttributes="Bold" />
+                            <Label Text="{Binding Text}" />
+                            <Label Text="{Binding Timestamp, StringFormat='{0:HH:mm}'}" 
+                                   FontSize="Small" 
+                                   TextColor="Gray" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <StackLayout Orientation="Horizontal" Padding="0,10,0,0">
+            <Entry x:Name="MessageEntry"
+                   Placeholder="メッセージを入力"
+                   HorizontalOptions="FillAndExpand"
+                   Text="{Binding NewMessageText}" />
+            <Button Text="送信"
+                    Command="{Binding SendMessageCommand}"
+                    VerticalOptions="Center" />
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

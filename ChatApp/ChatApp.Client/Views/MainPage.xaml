@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:ChatApp.Client.ViewModels"
+             xmlns:converters="clr-namespace:ChatApp.Client.Converters"
+             x:Class="ChatApp.Client.Views.MainPage">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:BooleanToHorizontalOptionsConverter x:Key="BooleanToHorizontalOptionsConverter" />
+            <converters:BooleanToColorConverter x:Key="BooleanToColorConverter"
+                                                TrueColor="DodgerBlue"
+                                                FalseColor="LightGray" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ScrollView>
+        <StackLayout Padding="10">
+            <CollectionView ItemsSource="{Binding Messages}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame Padding="10" Margin="5" HasShadow="False" CornerRadius="10"
+                               BackgroundColor="{Binding IsMine, Converter={StaticResource BooleanToColorConverter}}"
+                               HorizontalOptions="{Binding IsMine, Converter={StaticResource BooleanToHorizontalOptionsConverter}}">
+                            <StackLayout>
+                                <Label Text="{Binding Text}" TextColor="White" />
+                                <Label Text="{Binding Timestamp, StringFormat='{0:HH:mm}'}" FontSize="10" TextColor="White" HorizontalOptions="End" />
+                            </StackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Vertical" />
+                </CollectionView.ItemsLayout>
+            </CollectionView>
+
+            <StackLayout Orientation="Horizontal" Margin="0,10,0,0">
+                <Entry Text="{Binding NewMessageText}" Placeholder="メッセージを入力" HorizontalOptions="FillAndExpand" />
+                <Button Text="送信" Command="{Binding SendMessageCommand}" />
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>
